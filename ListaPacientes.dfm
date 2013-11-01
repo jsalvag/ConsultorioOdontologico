@@ -1,9 +1,9 @@
 object ListPac: TListPac
-  Left = 451
-  Top = 98
+  Left = 587
+  Top = 120
   BorderStyle = bsDialog
   Caption = 'Lista de Pacientes'
-  ClientHeight = 515
+  ClientHeight = 517
   ClientWidth = 756
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET

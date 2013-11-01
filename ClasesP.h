@@ -26,7 +26,8 @@ class Cita{
     Cita();
     void ingresar(String ci, String mot);
     void buscarCita(String ci);
-    int getY();
+    String citasDia(int f);
+    String datosCita(String ci, int i, int );
 };
 //---------------------------------------------------------------------------
 #endif

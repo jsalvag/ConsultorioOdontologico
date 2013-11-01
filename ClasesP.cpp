@@ -7,6 +7,7 @@
 #include "Inicio.h"
 #include "NuevoPaciente.h"
 #include "ListaPacientes.h"
+#include "ReportesF.h"
 
 //---------------------------------------------------------------------------
 
@@ -62,7 +63,6 @@ void Paciente::listarPac(){
 
     i++;
   }
-  //ShowMessage(IntToStr(i-1)+" Pacientes");
 }
 
 void Paciente::buscarPac(int index){
@@ -100,10 +100,6 @@ Cita::Cita(){
   y=0;
 }
 
-int Cita::getY(){
-  return y;
-}
-
 void Cita::ingresar(String ci, String mot){
   y++;
 
@@ -114,35 +110,30 @@ void Cita::ingresar(String ci, String mot){
   ListPac->listCitas->Cells[1][y] =Form1->ci->Caption;
   ListPac->listCitas->Cells[2][y] =Form1->Edit1->Text;
   ListPac->listCitas->Cells[3][y] =Form1->Memo1->Text;
+        //ShowMessage("Y="+IntToStr(y));
 }
 
 void Cita::buscarCita(String ci){
   int i=0;
   int j=0;
-  int c1=StrToInt(ci);
-  int c2;
+  String c1=ci;
+  String c2;
   bool v=false;
 
   Form1->ListBox1->Clear();
-  Form1->Label17->Caption="";
-  Form1->Label18->Caption="";
-  Form1->Label19->Caption="";
-  Form1->Label20->Caption="";
-  Form1->Label21->Caption="";
   Form1->Memo2->Clear();
-  Form1->ListBox1->Clear();
   Form1->MaskEdit1->Clear();
 
   while(j<ListPac->listPac->RowCount-1){
     j++;
-    c2=StrToInt(ListPac->listPac->Cells[1][j]);
+    c2=ListPac->listPac->Cells[1][j];
     if(ci==c2){
-      Form1->Label17->Caption=ListPac->listPac->Cells[2][j];
-      Form1->Label18->Caption=ListPac->listPac->Cells[3][j];
-      Form1->Label19->Caption=p.edad(TDateTime(ListPac->listPac->Cells[7][j]));
-      Form1->Label20->Caption=ListPac->listPac->Cells[4][j];
-      Form1->Label21->Caption=ListPac->listPac->Cells[6][j];
-      Form1->Memo2->Text=ListPac->listPac->Cells[5][j];
+      Form1->Label17->Caption=datosCita(ci,2,j);
+      Form1->Label18->Caption=datosCita(ci,3,j);
+      Form1->Label19->Caption=p.edad(TDateTime(datosCita(ci,7,j)));
+      Form1->Label20->Caption=datosCita(ci,4,j);
+      Form1->Label21->Caption=datosCita(ci,6,j);
+      Form1->Memo2->Text=datosCita(ci,5,j);
       v=true;
     }
   }
@@ -151,11 +142,34 @@ void Cita::buscarCita(String ci){
      i++;
      c2=StrToInt(ListPac->listCitas->Cells[1][i]);
      if(c1==c2){
-       Form1->ListBox1->Items->Add((ListPac->listCitas->Cells[2][i])+" - "+(ListPac->listCitas->Cells[2][i]));
+       Form1->ListBox1->Items->Add((ListPac->listCitas->Cells[2][i])+" - "+(ListPac->listCitas->Cells[3][i]));
      }
    }
   }else{
     ShowMessage("La cedula: "+ci+" no pertenece a ningun paciente registrado");
   }
+}
+
+String Cita::citasDia(int f){
+  int i=0;
+  while(i<y){
+    i++;
+    if(ListPac->listCitas->Cells[2][i]!=""){
+      int fc = StrToDate(ListPac->listCitas->Cells[2][i]);
+      if(f==fc){
+        return ListPac->listCitas->Cells[1][i];
+      }
+    }else{
+      ShowMessage("Lista vacia..");
+    }
+  }
+}
+
+String Cita::datosCita(String ci, int i, int j){
+
+  if(ci==ListPac->listPac->Cells[1][j]){
+    return ListPac->listPac->Cells[i][j];
+  }
+
 }
 

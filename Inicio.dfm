@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 173
-  Top = 131
+  Left = 191
+  Top = 122
   BorderStyle = bsToolWindow
   Caption = 'Consultorio Odontol'#243'gico  ABC'
   ClientHeight = 504
@@ -43,10 +43,10 @@ object Form1: TForm1
       TabOrder = 0
     end
     object GroupBox1: TGroupBox
-      Left = 16
+      Left = 1
       Top = 48
       Width = 193
-      Height = 161
+      Height = 167
       Caption = 'Datos del Paciente'
       TabOrder = 1
       object Label8: TLabel
@@ -326,7 +326,7 @@ object Form1: TForm1
       CalColors.TitleTextColor = cl3DLight
       CalColors.MonthBackColor = clInactiveBorder
       CalColors.TrailingTextColor = clBtnShadow
-      Date = 41577.8556200231
+      Date = 41577.4669659491
       TabOrder = 1
       OnClick = MonthCalendar1Click
     end
@@ -392,6 +392,7 @@ object Form1: TForm1
       Caption = 'Reportes'
       object Citasdelda1: TMenuItem
         Caption = 'Citas del d'#237'a'
+        OnClick = Citasdelda1Click
       end
       object Buscarcitas1: TMenuItem
         Caption = 'Buscar citas'

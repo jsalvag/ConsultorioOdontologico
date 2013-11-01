@@ -4,12 +4,13 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="ConsultorioOdontologico.exe"/>
-    <OBJFILES value="ConsultorioOdontologico.obj Inicio.obj ClasesP.obj NuevoPaciente.obj"/>
+    <OBJFILES value="ConsultorioOdontologico.obj Inicio.obj ClasesP.obj NuevoPaciente.obj 
+      ListaPacientes.obj"/>
     <RESFILES value="ConsultorioOdontologico.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) Inicio.dfm NuevoPaciente.dfm"/>
+    <RESDEPEN value="$(RESFILES) Inicio.dfm NuevoPaciente.dfm ListaPacientes.dfm"/>
     <LIBFILES value=""/>
     <LIBRARIES value=""/>
     <SPARELIBS value="vcl.lib rtl.lib"/>
@@ -59,6 +60,7 @@
       <FILE FILENAME="Inicio.cpp" FORMNAME="Form1" UNITNAME="Inicio" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="ClasesP.cpp" FORMNAME="" UNITNAME="ClasesP" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="NuevoPaciente.cpp" FORMNAME="RegPac" UNITNAME="NuevoPaciente" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ListaPacientes.cpp" FORMNAME="ListPac" UNITNAME="ListaPacientes" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>
