@@ -121,41 +121,30 @@ void Cita::buscarCita(String ci){
   int j=0;
   int c1=StrToInt(ci);
   int c2;
-  bool v=false;
+  while(i<y){
+    i++;
+    c2=StrToInt(ListPac->listCitas->Cells[1][i]);
+    if(c1==c2){
+      ShowMessage("Encontrado");
+       Form1->ListBox1->Items->Add((ListPac->listCitas->Cells[2][i])+" - "+(ListPac->listCitas->Cells[2][i]));
+    }
+  }
 
-  Form1->ListBox1->Clear();
-  Form1->Label17->Caption="";
-  Form1->Label18->Caption="";
-  Form1->Label19->Caption="";
-  Form1->Label20->Caption="";
-  Form1->Label21->Caption="";
-  Form1->Memo2->Clear();
-  Form1->ListBox1->Clear();
-  Form1->MaskEdit1->Clear();
-
+  ShowMessage("Buscando en Pacientes con "+ci);
   while(j<ListPac->listPac->RowCount-1){
+    ShowMessage("Vuelta #"+IntToStr(j)+" de #"+ListPac->listPac->RowCount+" en Lista de Pacinetes");
     j++;
+    ShowMessage("para j="+IntToStr(j)+" cedula="+ListPac->listPac->Cells[1][j]);
     c2=StrToInt(ListPac->listPac->Cells[1][j]);
     if(ci==c2){
       Form1->Label17->Caption=ListPac->listPac->Cells[2][j];
       Form1->Label18->Caption=ListPac->listPac->Cells[3][j];
-      Form1->Label19->Caption=p.edad(TDateTime(ListPac->listPac->Cells[7][j]));
+      Form1->Label19->Caption=p.edad(StrToInt(ListPac->listPac->Cells[7][j]));
       Form1->Label20->Caption=ListPac->listPac->Cells[4][j];
       Form1->Label21->Caption=ListPac->listPac->Cells[6][j];
       Form1->Memo2->Text=ListPac->listPac->Cells[5][j];
-      v=true;
     }
   }
-  if(v){
-   while(i<y){
-     i++;
-     c2=StrToInt(ListPac->listCitas->Cells[1][i]);
-     if(c1==c2){
-       Form1->ListBox1->Items->Add((ListPac->listCitas->Cells[2][i])+" - "+(ListPac->listCitas->Cells[2][i]));
-     }
-   }
-  }else{
-    ShowMessage("La cedula: "+ci+" no pertenece a ningun paciente registrado");
-  }
+
 }
 

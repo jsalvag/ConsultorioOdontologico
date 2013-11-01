@@ -46,7 +46,7 @@ this->Close();
 //---------------------------------------------------------------------------
 void __fastcall TListPac::Button2Click(TObject *Sender)
 {
-  Label1->Caption=listPac->RowCount;
-  Label2->Caption=listCitas->RowCount;
+  Label1->Caption=p.x;
+  Label2->Caption=c.y;
 }
 //---------------------------------------------------------------------------
