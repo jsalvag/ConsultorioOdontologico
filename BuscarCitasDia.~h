@@ -1,28 +1,27 @@
 //---------------------------------------------------------------------------
 
-#ifndef ListaPacientesH
-#define ListaPacientesH
+#ifndef BuscarCitasDiaH
+#define BuscarCitasDiaH
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
-#include <Grids.hpp>
+#include <ComCtrls.hpp>
 //---------------------------------------------------------------------------
-class TListPac : public TForm
+class TForm2 : public TForm
 {
 __published:	// IDE-managed Components
-        TStringGrid *listPac;
+        TLabel *Label1;
+        TDateTimePicker *DateTimePicker1;
         TButton *Button1;
-        TStringGrid *listCitas;
-        TStringGrid *listMes;
-        void __fastcall FormCreate(TObject *Sender);
         void __fastcall Button1Click(TObject *Sender);
+        void __fastcall FormCreate(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
-        __fastcall TListPac(TComponent* Owner);
+        __fastcall TForm2(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TListPac *ListPac;
+extern PACKAGE TForm2 *Form2;
 //---------------------------------------------------------------------------
 #endif

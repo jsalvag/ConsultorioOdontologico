@@ -1,6 +1,6 @@
 object RegPac: TRegPac
-  Left = 69
-  Top = 148
+  Left = 198
+  Top = 131
   BorderStyle = bsSingle
   Caption = 'Ingresar Paciente'
   ClientHeight = 276

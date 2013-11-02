@@ -150,30 +150,57 @@ void Cita::buscarCita(String ci){
   }
 }
 
-String Cita::citasDia(int f){
-        ShowMessage("Funcion citasDia(int "+IntToStr(f)+")");
-  int i=0;
-        ShowMessage("Y="+IntToStr(f)
-        );
-  while(i<y){
-    i++;
-        ShowMessage("Valor de i(int "+IntToStr(i)+")\nFecha en la tabla("+ListPac->listCitas->Cells[2][i]+")");
+void Cita::citasDia(int f){
+  int i=1;
+  int j=1;
+  int a=ListPac->listCitas->RowCount;
+  int b=ListPac->listPac->RowCount;
+  String ci;
+  Reportes->Show();
+
+        ShowMessage("entrara al while1 si i<a"+IntToStr(i)+"<"+IntToStr(a));
+
+  while(i<a){
+
+        ShowMessage("Primer while\ni= "+IntToStr(i)+"\nfecha= "+ListPac->listCitas->Cells[2][i]);
     if(ListPac->listCitas->Cells[2][i]!=""){
-      int fc = StrToDate(ListPac->listCitas->Cells[2][i]);
-      if(f==fc){
-        return ListPac->listCitas->Cells[1][i];
-      }
+    if(f==TDateTime(ListPac->listCitas->Cells[2][i])){
+                       ShowMessage("TODO BIEN");
+      ci=ListPac->listCitas->Cells[1][i];
+                       ShowMessage("TODO BIEN");
+      while(j<b){
+                       ShowMessage("TODO BIEN");
+        if(ci==ListPac->listPac->Cells[1][j]){
+                       ShowMessage("TODO BIEN");
+                ShowMessage("i="+IntToStr(i)+"\nj="+IntToStr(j)+
+                "\na="+IntToStr(a)+"\nb="+IntToStr(b));
+                       ShowMessage("TODO BIEN");
+          Reportes->ListBox1->Items->Add(
+            i+" - "+datosCita(ci,3,j)+", "+datosCita(ci,2,j)
+          );
+                       ShowMessage("TODO BIEN");
+        }else{
+                ShowMessage("no entro al if 2");
+        }
+        j++;
+      }//fin while 2
     }else{
-      ShowMessage("Lista vacia..");
+        ShowMessage("NO entro al if 1");
     }
-  }
+
+    }else{
+        ShowMessage("no hay fecha para buscar");
+    }
+    i++;
+  }//fin while 1
+
 }
 
 String Cita::datosCita(String ci, int i, int j){
 
-  if(ci==ListPac->listPac->Cells[1][j]){
+
     return ListPac->listPac->Cells[i][j];
-  }
+
 
 }
 

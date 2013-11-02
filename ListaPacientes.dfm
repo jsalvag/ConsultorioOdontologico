@@ -16,39 +16,11 @@ object ListPac: TListPac
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 128
-    Top = 464
-    Width = 13
-    Height = 13
-    Caption = 'X: '
-  end
-  object Label2: TLabel
-    Left = 128
-    Top = 480
-    Width = 13
-    Height = 13
-    Caption = 'Y: '
-  end
-  object Label3: TLabel
-    Left = 104
-    Top = 464
-    Width = 13
-    Height = 13
-    Caption = 'X: '
-  end
-  object Label4: TLabel
-    Left = 104
-    Top = 480
-    Width = 13
-    Height = 13
-    Caption = 'Y: '
-  end
   object listPac: TStringGrid
     Left = 0
     Top = 0
     Width = 756
-    Height = 193
+    Height = 161
     Align = alTop
     ColCount = 8
     RowCount = 2
@@ -74,7 +46,7 @@ object ListPac: TListPac
   end
   object listCitas: TStringGrid
     Left = 0
-    Top = 193
+    Top = 161
     Width = 756
     Height = 160
     Align = alTop
@@ -87,13 +59,19 @@ object ListPac: TListPac
       64
       556)
   end
-  object Button2: TButton
-    Left = 8
-    Top = 472
-    Width = 75
-    Height = 25
-    Caption = 'Ver X Y'
+  object listMes: TStringGrid
+    Left = 0
+    Top = 321
+    Width = 756
+    Height = 144
+    Align = alTop
+    RowCount = 2
     TabOrder = 3
-    OnClick = Button2Click
+    ColWidths = (
+      64
+      97
+      98
+      105
+      96)
   end
 end

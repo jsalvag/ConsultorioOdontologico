@@ -1,6 +1,6 @@
 object ListPac: TListPac
-  Left = 32
-  Top = 64
+  Left = 587
+  Top = 120
   BorderStyle = bsDialog
   Caption = 'Lista de Pacientes'
   ClientHeight = 517

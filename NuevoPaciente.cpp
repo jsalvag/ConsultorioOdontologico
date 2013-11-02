@@ -40,9 +40,11 @@ void __fastcall TRegPac::Button1Click(TObject *Sender)
       sexo=false;
     }
     nuevo.ingresar(MaskEdit1->Text, Edit1->Text, Edit2->Text, sexo, Memo1->Text, MaskEdit2->Text, fechNac->Date.DateString());
+    
     this->Close();
     Button2Click(Sender);
   }
 }
 //---------------------------------------------------------------------------
+
 

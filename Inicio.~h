@@ -80,6 +80,8 @@ __published:	// IDE-managed Components
         void __fastcall Buscar1Click(TObject *Sender);
         void __fastcall Button2Click(TObject *Sender);
         void __fastcall Citasdelda1Click(TObject *Sender);
+        void __fastcall Buscarcitas1Click(TObject *Sender);
+        void __fastcall Citaspormes1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

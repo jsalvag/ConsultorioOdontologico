@@ -21,11 +21,6 @@ Paciente::Paciente(){
   x=0;
 }
 
-int Paciente::getX(){
-  return x;
-}
-
-
 void Paciente::ingresar(String ci, String nom, String ape, bool sex, String dir, String telf, TDateTime fNac){
   x++;
   String sexo;
@@ -110,7 +105,6 @@ void Cita::ingresar(String ci, String mot){
   ListPac->listCitas->Cells[1][y] =Form1->ci->Caption;
   ListPac->listCitas->Cells[2][y] =Form1->Edit1->Text;
   ListPac->listCitas->Cells[3][y] =Form1->Memo1->Text;
-        //ShowMessage("Y="+IntToStr(y));
 }
 
 void Cita::buscarCita(String ci){
@@ -150,26 +144,101 @@ void Cita::buscarCita(String ci){
   }
 }
 
-String Cita::citasDia(int f){
-  int i=0;
-  while(i<y){
-    i++;
+void Cita::citasDia(int f){
+  int i=1;
+  int a=ListPac->listCitas->RowCount;
+  int b=ListPac->listPac->RowCount;
+  String ci;
+  Reportes->Show();
+  
+  while(i<a){
     if(ListPac->listCitas->Cells[2][i]!=""){
-      int fc = StrToDate(ListPac->listCitas->Cells[2][i]);
-      if(f==fc){
-        return ListPac->listCitas->Cells[1][i];
-      }
+    if(f==TDateTime(ListPac->listCitas->Cells[2][i])){
+      ci=ListPac->listCitas->Cells[1][i];
+      int j=1;
+      while(j<b){
+        if(ci==ListPac->listPac->Cells[1][j]){
+          Reportes->ListBox1->Items->Add(
+            IntToStr(i)+" - "+ci+" - "+datosCita(ci,3,j)+", "+datosCita(ci,2,j)
+          );
+        }else{
+        }
+        j++;
+      }//fin while 2
+
     }else{
-      ShowMessage("Lista vacia..");
     }
-  }
+
+    }else{
+        ShowMessage("No hay citas");
+    }
+    i++;
+  }//fin while 1
+
 }
 
 String Cita::datosCita(String ci, int i, int j){
-
-  if(ci==ListPac->listPac->Cells[1][j]){
     return ListPac->listPac->Cells[i][j];
-  }
-
 }
 
+//----------------------------------------------------------------------------
+//-------------------------------------------Cita-----------------------------
+//----------------------------------------------------------------------------
+Reporte::Reporte(){
+  z=0;
+}
+
+void Reporte::organizarMes(String f){
+  String mes = f.SubString(4,2);
+  String a;
+  int i=1, j=1, cont=0;
+  String nom,ape;
+  ListPac->listMes->Cells[0][0]=f;
+  z=0;
+  while(i<ListPac->listCitas->RowCount){
+    a=ListPac->listCitas->Cells[2][i];
+    a=a.SubString(4,2);
+    if(a.Pos(mes)==(0||1)){
+      String ci=ListPac->listCitas->Cells[1][i];
+      while(j<ListPac->listPac->RowCount){
+        nom=c.datosCita(ci,2,j);
+        ape=c.datosCita(ci,3,j);
+        j++;
+      }
+      ingresarListMes(ci, nom, ape);
+      cont++;
+    }
+    i++;
+  }
+  ShowMessage("Se encontraron = "+IntToStr(cont)+" citas para el mes "+mes);
+}
+
+void Reporte::ingresarListMes(String ci, String nom, String ape){
+  z++;
+  if(ListPac->listMes->RowCount<=z)
+    ListPac->listMes->RowCount++;
+
+  ListPac->listMes->Cells[0][z]=z;
+  ListPac->listMes->Cells[1][z]=ci;
+  ListPac->listMes->Cells[2][z]=nom;
+  ListPac->listMes->Cells[3][z]=ape;
+}
+
+String Paciente::contadorPorMes()
+{
+        int i=1, j=1, may=0;
+        String ci, nom, ape;
+
+        while(i<ListPac->listPac->RowCount){
+                ci=ListPac->listPac->Cells[1][i];
+                while(j<ListPac->listMes->RowCount){
+                        if(ci==ListPac->listMes->Cells[1][j]){
+
+                        }
+                        j++;
+                }
+                i++;
+        }
+
+        return
+}

@@ -1,0 +1,16 @@
+  String fecha = "33-01-95";
+  String mes = fecha.SubString(4,2);
+  String a;
+  int i=1, cont=0;
+  while(i<ListPac->listCitas->RowCount){
+        ShowMessage("while "+IntToStr(i));
+    a=ListPac->listCitas->Cells[2][i];
+    a=a.SubString(4,2);
+        ShowMessage("Cantidad de filas: "+IntToStr(ListPac->listCitas->RowCount-1)
+        +"\ni: "+IntToStr(i)+"\n Fecha seleccionada: "+a+"\naPos(mes): "+a.Pos(mes));
+    if(a.Pos(mes)==(0||1)){
+      cont++;
+    }
+    i++;
+  }
+  ShowMessage("Se encontraron = "+IntToStr(cont)+" citas para el mes "+mes);

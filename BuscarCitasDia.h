@@ -1,23 +1,27 @@
 //---------------------------------------------------------------------------
 
-#ifndef ReportesFH
-#define ReportesFH
+#ifndef BuscarCitasDiaH
+#define BuscarCitasDiaH
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
+#include <ComCtrls.hpp>
 //---------------------------------------------------------------------------
-class TReportes : public TForm
+class TForm2 : public TForm
 {
 __published:	// IDE-managed Components
-        TGroupBox *GroupBox1;
-        TListBox *ListBox1;
+        TLabel *Label1;
+        TDateTimePicker *DateTimePicker1;
+        TButton *Button1;
+        void __fastcall Button1Click(TObject *Sender);
+        void __fastcall FormCreate(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
-        __fastcall TReportes(TComponent* Owner);
+        __fastcall TForm2(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TReportes *Reportes;
+extern PACKAGE TForm2 *Form2;
 //---------------------------------------------------------------------------
 #endif

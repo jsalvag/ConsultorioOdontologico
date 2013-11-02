@@ -37,16 +37,14 @@ listCitas->Cells[1][0]="Cédula";
 listCitas->Cells[2][0]="Fecha";
 listCitas->Cells[3][0]="Motivo";
 
+listMes->Cells[1][0]="Cédula";
+listMes->Cells[2][0]="Nombre";
+listMes->Cells[3][0]="Apellido";
+
 }
 //---------------------------------------------------------------------------
 void __fastcall TListPac::Button1Click(TObject *Sender)
 {
 this->Close();
-}
-//---------------------------------------------------------------------------
-void __fastcall TListPac::Button2Click(TObject *Sender)
-{
-  Label1->Caption=listPac->RowCount;
-  Label2->Caption=listCitas->RowCount;
 }
 //---------------------------------------------------------------------------

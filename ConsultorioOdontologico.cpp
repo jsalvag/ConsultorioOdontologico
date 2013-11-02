@@ -7,6 +7,7 @@ USEFORM("Inicio.cpp", Form1);
 USEFORM("NuevoPaciente.cpp", RegPac);
 USEFORM("ListaPacientes.cpp", ListPac);
 USEFORM("ReportesF.cpp", Reportes);
+USEFORM("BuscarCitasDia.cpp", Form2);
 //---------------------------------------------------------------------------
 WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
@@ -17,6 +18,7 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
                  Application->CreateForm(__classid(TRegPac), &RegPac);
                  Application->CreateForm(__classid(TListPac), &ListPac);
                  Application->CreateForm(__classid(TReportes), &Reportes);
+                 Application->CreateForm(__classid(TForm2), &Form2);
                  Application->Run();
         }
         catch (Exception &exception)

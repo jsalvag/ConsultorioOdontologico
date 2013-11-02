@@ -12,7 +12,7 @@ class Paciente{
     void buscarPac(int index);
     void buscarCI(String ci);
     int edad(int fNac);
-    int getX();
+    String contadorPorMes();
 
   private:
     String auxNom, auxApe, auxInd;
@@ -26,8 +26,22 @@ class Cita{
     Cita();
     void ingresar(String ci, String mot);
     void buscarCita(String ci);
-    String citasDia(int f);
+    void citasDia(int f);
     String datosCita(String ci, int i, int );
+};
+
+class Reporte{
+
+
+public:
+        int z;
+        void organizarMes(String f);
+        void ingresarListMes(String ci, String nom, String ape);
+        Reporte();
+
+private:
+        Paciente p;
+        Cita c;
 };
 //---------------------------------------------------------------------------
 #endif

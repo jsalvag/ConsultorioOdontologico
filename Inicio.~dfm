@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 35
-  Top = 119
+  Left = 222
+  Top = 192
   BorderStyle = bsToolWindow
   Caption = 'Consultorio Odontol'#243'gico  ABC'
   ClientHeight = 504
@@ -48,7 +48,7 @@ object Form1: TForm1
       Width = 193
       Height = 167
       Caption = 'Datos del Paciente'
-      TabOrder = 1
+      TabOrder = 2
       object Label8: TLabel
         Left = 8
         Top = 24
@@ -177,7 +177,7 @@ object Form1: TForm1
       Font.Name = 'MS Sans Serif'
       Font.Style = [fsBold]
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 1
       OnClick = Button2Click
     end
     object ListBox1: TListBox
@@ -326,7 +326,7 @@ object Form1: TForm1
       CalColors.TitleTextColor = cl3DLight
       CalColors.MonthBackColor = clInactiveBorder
       CalColors.TrailingTextColor = clBtnShadow
-      Date = 41577.4669659491
+      Date = 41577.8062463773
       TabOrder = 1
       OnClick = MonthCalendar1Click
     end
@@ -396,9 +396,11 @@ object Form1: TForm1
       end
       object Buscarcitas1: TMenuItem
         Caption = 'Buscar citas'
+        OnClick = Buscarcitas1Click
       end
       object Citaspormes1: TMenuItem
         Caption = 'Citas por mes'
+        OnClick = Citaspormes1Click
       end
       object Citasporedad1: TMenuItem
         Caption = 'Citas por edad'
