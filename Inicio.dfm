@@ -409,6 +409,7 @@ object Form1: TForm1
       Caption = 'Estadisticas'
       object Promedioanual1: TMenuItem
         Caption = 'Promedio anual'
+        OnClick = Promedioanual1Click
       end
       object Promediosemanal1: TMenuItem
         Caption = 'Promedio semanal'

@@ -5,13 +5,14 @@
     <VERSION value="BCB.06.00"/>
     <PROJECT value="ConsultorioOdontologico.exe"/>
     <OBJFILES value="ConsultorioOdontologico.obj Inicio.obj ClasesP.obj NuevoPaciente.obj 
-      ListaPacientes.obj ReportesF.obj BuscarCitasDia.obj BuscarCitasMes.obj"/>
+      ListaPacientes.obj ReportesF.obj BuscarCitasDia.obj BuscarCitasMes.obj 
+      BuscarCitasAnio.obj"/>
     <RESFILES value="ConsultorioOdontologico.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) Inicio.dfm NuevoPaciente.dfm ListaPacientes.dfm ReportesF.dfm 
-      BuscarCitasDia.dfm BuscarCitasMes.dfm"/>
+      BuscarCitasDia.dfm BuscarCitasMes.dfm BuscarCitasAnio.dfm"/>
     <LIBFILES value=""/>
     <LIBRARIES value=""/>
     <SPARELIBS value="vcl.lib rtl.lib"/>
@@ -65,6 +66,7 @@
       <FILE FILENAME="ReportesF.cpp" FORMNAME="Reportes" UNITNAME="ReportesF" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="BuscarCitasDia.cpp" FORMNAME="Form2" UNITNAME="BuscarCitasDia" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="BuscarCitasMes.cpp" FORMNAME="Form3" UNITNAME="BuscarCitasMes" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="BuscarCitasAnio.cpp" FORMNAME="Form4" UNITNAME="BuscarCitasAnio" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>

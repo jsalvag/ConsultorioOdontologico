@@ -47,7 +47,7 @@
 			"file": "ClasesP.cpp",
 			"settings":
 			{
-				"buffer_size": 7613,
+				"buffer_size": 8805,
 				"line_ending": "Windows"
 			}
 		},
@@ -58,6 +58,14 @@
 				"buffer_size": 550,
 				"line_ending": "Windows",
 				"name": "String fecha = \"33-01-95\";"
+			}
+		},
+		{
+			"file": "NuevoPaciente.cpp",
+			"settings":
+			{
+				"buffer_size": 1753,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -147,7 +155,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -155,15 +163,15 @@
 					"file": "ClasesP.cpp",
 					"settings":
 					{
-						"buffer_size": 7613,
+						"buffer_size": 8805,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4281,
-								4277
+								8732,
+								8732
 							]
 						],
 						"settings":
@@ -173,7 +181,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2770.0,
+						"translation.y": 6714.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -203,6 +211,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "NuevoPaciente.cpp",
+					"settings":
+					{
+						"buffer_size": 1753,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1080,
+								1080
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 636.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

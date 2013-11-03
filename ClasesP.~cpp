@@ -385,23 +385,19 @@ String Reporte::mayorEdad(){
 
 void Estadistica::citasAnio(String a)
 {
-  Form4->Edit1->Date.CurrentDate();
+  Form4->Edit1->Clear();
   Form4->Label2->Caption="";
   Form4->Label3->Caption="";
 
   int b = ListPac->listCitas->RowCount;
-  int i=1, cont=0;
+  int i=1;
   String c;
 
   while(i<b){
     c = ListPac->listCitas->Cells[2][i];
-    if(c.Pos(a)){
-      cont++;
-    }
-    i++;
+    if(c.Pos(a)){}
   }
 
   Form4->Label3->Caption="Para el año "+a+" hay:";
-  Form4->Label2->Caption=IntToStr(cont)+" Citas";
 
 }
