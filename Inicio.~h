@@ -54,7 +54,6 @@ __published:	// IDE-managed Components
         TLabel *dir;
         TPanel *Panel2;
         TLabel *Label6;
-        TMaskEdit *MaskEdit1;
         TGroupBox *GroupBox1;
         TLabel *Label8;
         TButton *Button2;
@@ -70,6 +69,7 @@ __published:	// IDE-managed Components
         TLabel *Label21;
         TMemo *Memo2;
         TListBox *ListBox1;
+        TEdit *MaskEdit1;
         void __fastcall Salir1Click(TObject *Sender);
         void __fastcall Ingresar1Click(TObject *Sender);
         void __fastcall Lista1Click(TObject *Sender);

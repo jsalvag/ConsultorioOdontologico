@@ -54,7 +54,6 @@ __published:	// IDE-managed Components
         TLabel *dir;
         TPanel *Panel2;
         TLabel *Label6;
-        TMaskEdit *MaskEdit1;
         TGroupBox *GroupBox1;
         TLabel *Label8;
         TButton *Button2;
@@ -70,6 +69,7 @@ __published:	// IDE-managed Components
         TLabel *Label21;
         TMemo *Memo2;
         TListBox *ListBox1;
+        TEdit *MaskEdit1;
         void __fastcall Salir1Click(TObject *Sender);
         void __fastcall Ingresar1Click(TObject *Sender);
         void __fastcall Lista1Click(TObject *Sender);
@@ -82,6 +82,7 @@ __published:	// IDE-managed Components
         void __fastcall Citasdelda1Click(TObject *Sender);
         void __fastcall Buscarcitas1Click(TObject *Sender);
         void __fastcall Citaspormes1Click(TObject *Sender);
+        void __fastcall Citasporedad1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

@@ -14,7 +14,6 @@ TListPac *ListPac;
 Paciente p;
 Cita c;
 
-
 //---------------------------------------------------------------------------
 __fastcall TListPac::TListPac(TComponent* Owner)
         : TForm(Owner)

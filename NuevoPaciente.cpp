@@ -34,17 +34,27 @@ void __fastcall TRegPac::Button1Click(TObject *Sender)
   if(MaskEdit1->Text.IsEmpty()||Edit1->Text.IsEmpty()||Edit2->Text.IsEmpty()||Memo1->Text.IsEmpty()||MaskEdit2->Text.IsEmpty()){
     ShowMessage("LLene todos los campos...");
   }else{
-    if(Masc->Checked){
-      sexo=true;
+    if (fechNac->Date>Date().CurrentDate()-364.25)
+    {
+      ShowMessage("La fecha de nacimiento no puede ser menor a 1 año");
     }else{
-      sexo=false;
+      if(Masc->Checked){
+        sexo=true;
+      }else{
+        sexo=false;
+      }
+      nuevo.ingresar(MaskEdit1->Text, Edit1->Text, Edit2->Text, sexo, Memo1->Text, MaskEdit2->Text, fechNac->Date.DateString());
+
+      this->Close();
+      Button2Click(Sender);
     }
-    nuevo.ingresar(MaskEdit1->Text, Edit1->Text, Edit2->Text, sexo, Memo1->Text, MaskEdit2->Text, fechNac->Date.DateString());
-    
-    this->Close();
-    Button2Click(Sender);
   }
 }
 //---------------------------------------------------------------------------
 
 
+void __fastcall TRegPac::FormCreate(TObject *Sender)
+{
+        fechNac->Date=Date()-366;        
+}
+//---------------------------------------------------------------------------

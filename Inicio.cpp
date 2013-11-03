@@ -140,3 +140,11 @@ void __fastcall TForm1::Citaspormes1Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+
+void __fastcall TForm1::Citasporedad1Click(TObject *Sender)
+{
+  String mj = r.mayorEdad();
+  ShowMessage(mj);
+}
+//---------------------------------------------------------------------------
+

@@ -40,10 +40,13 @@ public:
         Reporte();
         void limpiarM();
         String numMes(int i);
+        String mayorEdad();
 
 private:
         Paciente p;
         Cita c;
+        String datosPac(String ci);
+        int edad(int fNac);
 };
 //---------------------------------------------------------------------------
 #endif

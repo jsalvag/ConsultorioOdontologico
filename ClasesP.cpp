@@ -85,7 +85,7 @@ void Paciente::buscarCI(String ci){
 int Paciente::edad(int fNac){
   int f = Date().CurrentDate();
   return (f-fNac)/365.25 ;
-} 
+}
 
 String Paciente::datosCita(int i, int j){
     return ListPac->listPac->Cells[i][j];
@@ -283,8 +283,7 @@ void Reporte::ingresarListMes(String ci, String nom, String ape, int n){
 
 
 
-String Paciente::datosPac(String ci)
-{
+String Paciente::datosPac(String ci){
   int i=1;
   String dato="";
 
@@ -327,4 +326,57 @@ String Reporte::numMes(int i)
           case 10: return "11";break;
           case 11: return "12";break;
         }
+}
+
+String Reporte::datosPac(String ci){
+  int i=1;
+  String dato="";
+
+  while(i<ListPac->listPac->RowCount){
+
+    if(ci==ListPac->listPac->Cells[1][i]){
+      dato = ListPac->listPac->Cells[3][i]+", "+ListPac->listPac->Cells[2][i];
+    }
+    i++;
+  }
+  return dato;
+}
+
+int Reporte::edad(int fNac){
+  int f = Date().CurrentDate();
+  return (f-fNac)/364.25 ;
+}
+
+String Reporte::mayorEdad(){
+  int may=0, cont, i=1, j, e, cit=0;
+  String ci, ci1, ci2, nom, dato;
+  int a= ListPac->listPac->RowCount;
+  int b= ListPac->listCitas->RowCount;
+  if(ListPac->listPac->Cells[1][1]!=""){
+    while(i<a){
+      ci1 = ListPac->listPac->Cells[1][i];
+      e = edad(TDateTime(ListPac->listPac->Cells[7][i]));
+      j=1;
+      cont=0;
+      while(j<b){
+        ci2 = ListPac->listCitas->Cells[1][j];
+        if(ci2==ci1){
+          cont++;
+        }
+        j++;
+      }
+      if(e>=may&&cont>cit){
+        ci=ci1;
+        nom=datosPac(ci);
+        may=e;
+        cit=cont;
+      }
+    i++;
+    }
+    dato = "La persona de mayor edad con mayor cantidad de citas es:\n  C.I.:\t\t"
+          +ci+"\n  Nombre:\t"+nom+"\n  Edad:\t\t"+may+"\nCon un total de "+cit+" citas.";
+  }else{
+    dato = "No hay datos...";
+  }
+  return dato;
 }
