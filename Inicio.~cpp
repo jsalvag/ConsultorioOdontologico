@@ -17,7 +17,7 @@
 TForm1 *Form1;
 Paciente pac;
 Cita ct;
-Reportes
+Reporte r;
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
@@ -135,7 +135,12 @@ void __fastcall TForm1::Buscarcitas1Click(TObject *Sender)
 
 void __fastcall TForm1::Citaspormes1Click(TObject *Sender)
 {
-  r
+
+  r.organizarMes(Date());
+
+  String mj=pac.contadorPorMes(Date());
+
+  ShowMessage(mj);
 }
 //---------------------------------------------------------------------------
 

@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 222
-  Top = 192
+  Left = 4
+  Top = 122
   BorderStyle = bsToolWindow
   Caption = 'Consultorio Odontol'#243'gico  ABC'
   ClientHeight = 504

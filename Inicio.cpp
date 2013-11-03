@@ -11,6 +11,7 @@
 #include "ListaPacientes.h"
 #include "ReportesF.h"
 #include "BuscarCitasDia.h"
+#include "BuscarCitasMes.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -135,7 +136,7 @@ void __fastcall TForm1::Buscarcitas1Click(TObject *Sender)
 
 void __fastcall TForm1::Citaspormes1Click(TObject *Sender)
 {
-  r.organizarMes(Date());
+  Form3->Show();
 }
 //---------------------------------------------------------------------------
 

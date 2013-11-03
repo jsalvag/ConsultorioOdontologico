@@ -12,10 +12,12 @@ class Paciente{
     void buscarPac(int index);
     void buscarCI(String ci);
     int edad(int fNac);
-    String contadorPorMes();
+    String contadorPorMes(String mes);
+        String datosPac(String ci);
 
   private:
     String auxNom, auxApe, auxInd;
+    String datosCita(int i, int j);
 };
 
 class Cita{
@@ -31,13 +33,13 @@ class Cita{
 };
 
 class Reporte{
-
-
 public:
         int z;
-        void organizarMes(String f);
-        void ingresarListMes(String ci, String nom, String ape);
+        void organizarMes(String mes);
+        void ingresarListMes(String ci, String nom, String ape, int n);
         Reporte();
+        void limpiarM();
+        String numMes(int i);
 
 private:
         Paciente p;

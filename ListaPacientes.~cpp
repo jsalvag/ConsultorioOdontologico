@@ -48,4 +48,3 @@ void __fastcall TListPac::Button1Click(TObject *Sender)
 this->Close();
 }
 //---------------------------------------------------------------------------
-

@@ -47,8 +47,17 @@
 			"file": "ClasesP.cpp",
 			"settings":
 			{
-				"buffer_size": 4184,
+				"buffer_size": 7613,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "codigoRescatado",
+			"settings":
+			{
+				"buffer_size": 550,
+				"line_ending": "Windows",
+				"name": "String fecha = \"33-01-95\";"
 			}
 		}
 	],
@@ -146,15 +155,15 @@
 					"file": "ClasesP.cpp",
 					"settings":
 					{
-						"buffer_size": 4184,
+						"buffer_size": 7613,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3953,
-								3953
+								4281,
+								4277
 							]
 						],
 						"settings":
@@ -164,7 +173,36 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3087.0,
+						"translation.y": 2770.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "codigoRescatado",
+					"settings":
+					{
+						"buffer_size": 550,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								550,
+								550
+							]
+						],
+						"settings":
+						{
+							"auto_name": "String fecha = \"33-01-95\";",
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

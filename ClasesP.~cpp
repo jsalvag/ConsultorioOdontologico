@@ -92,11 +92,11 @@ String Paciente::datosCita(int i, int j){
 }
 
 
-String Paciente::contadorPorMes(String mes)
+String Paciente::contadorPorMes(String f)
 {
   int i=1, j, may=0, cant=0;
   String ci, ci1, ci2, ci3="", nom;
-  
+  String mes=f.SubString(4,2);
   int a=ListPac->listPac->RowCount;
   int b=ListPac->listMes->RowCount;
 
@@ -130,7 +130,7 @@ String Paciente::contadorPorMes(String mes)
         "\nCon #"+may+" citas";
 
   if(ci==""){
-    return "No hay Registros para el mes "+mes;
+    return "No hay Registros";
   }else{
     return datos;
   }
@@ -237,7 +237,8 @@ Reporte::Reporte(){
   z=0;
 }
 
-void Reporte::organizarMes(String mes){
+void Reporte::organizarMes(String f){
+  String mes = f.SubString(4,2);
   String fc;
   String ciC, ciP, nom, ape;
   int a=ListPac->listCitas->RowCount;
@@ -309,22 +310,4 @@ void Reporte::limpiarM()
                 }
         }
 
-}
-
-String Reporte::numMes(int i)
-{
-        switch(i){
-          case 0: return "01";break;
-          case 1: return "02";break;
-          case 2: return "03";break;
-          case 3: return "04";break;
-          case 4: return "05";break;
-          case 5: return "06";break;
-          case 6: return "07";break;
-          case 7: return "08";break;
-          case 8: return "09";break;
-          case 9: return "10";break;
-          case 10: return "11";break;
-          case 11: return "12";break;
-        }
 }

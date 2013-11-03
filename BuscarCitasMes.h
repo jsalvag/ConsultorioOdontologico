@@ -1,28 +1,24 @@
 //---------------------------------------------------------------------------
 
-#ifndef ListaPacientesH
-#define ListaPacientesH
+#ifndef BuscarCitasMesH
+#define BuscarCitasMesH
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
-#include <Grids.hpp>
 //---------------------------------------------------------------------------
-class TListPac : public TForm
+class TForm3 : public TForm
 {
 __published:	// IDE-managed Components
-        TStringGrid *listPac;
-        TButton *Button1;
-        TStringGrid *listCitas;
-        TStringGrid *listMes;
-        void __fastcall FormCreate(TObject *Sender);
-        void __fastcall Button1Click(TObject *Sender);
+        TComboBox *ComboBox1;
+        TLabel *Label1;
+        void __fastcall ComboBox1Change(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
-        __fastcall TListPac(TComponent* Owner);
+        __fastcall TForm3(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TListPac *ListPac;
+extern PACKAGE TForm3 *Form3;
 //---------------------------------------------------------------------------
 #endif

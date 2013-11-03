@@ -64,15 +64,6 @@ object RegPac: TRegPac
     Height = 13
     Caption = 'F. de Nac: '
   end
-  object MaskEdit1: TMaskEdit
-    Left = 80
-    Top = 16
-    Width = 118
-    Height = 21
-    EditMask = '00\.000\.000;0;_'
-    MaxLength = 10
-    TabOrder = 0
-  end
   object Edit1: TEdit
     Left = 80
     Top = 40
@@ -124,10 +115,10 @@ object RegPac: TRegPac
   object MaskEdit2: TMaskEdit
     Left = 80
     Top = 208
-    Width = 111
+    Width = 107
     Height = 21
-    EditMask = '!\(999\)000-0000;0;_'
-    MaxLength = 13
+    EditMask = '!\(9999\)000-0000;0;_'
+    MaxLength = 14
     TabOrder = 8
   end
   object Button1: TButton
@@ -161,5 +152,12 @@ object RegPac: TRegPac
     Kind = dtkDate
     ParseInput = False
     TabOrder = 6
+  end
+  object MaskEdit1: TEdit
+    Left = 80
+    Top = 16
+    Width = 121
+    Height = 21
+    TabOrder = 0
   end
 end
